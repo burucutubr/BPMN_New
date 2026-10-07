@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://omg.org" xmlns:bpmndi="http://omg.org" xmlns:dc="http://omg.org" xmlns:di="http://omg.org" id="Definitions_3" targetNamespace="http://bpmn.io">
+  <bpmn:collaboration id="Collaboration_3">
+    <bpmn:participant id="Participant_3" name="ABDesign Fotos - Processo Interno" processRef="Process_3" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process_3" isExecutable="false">
+    <bpmn:laneSet id="LaneSet_3">
+      <bpmn:lane id="Lane_3_1" name="Equipe de Fotografia">
+        <bpmn:flowNodeRef>Start_3</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T3_1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T3_2</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T3_3</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_3_2" name="Equipe de Edição">
+        <bpmn:flowNodeRef>T3_4</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T3_5</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T3_6</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T3_7</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T3_8</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_3_3" name="Site / Equipe de Vendas">
+        <bpmn:flowNodeRef>T3_9</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T3_10</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T3_11</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T3_12</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T3_13</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_3_4" name="Confecção (Produção Interna)">
+        <bpmn:flowNodeRef>T3_14</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T3_15</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T3_16</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_3_5" name="Fornecedores (Gráfica, etc.)">
+        <bpmn:flowNodeRef>T3_17</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T3_18</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T3_19</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_3_6" name="Logística ABDesign">
+        <bpmn:flowNodeRef>T3_20</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T3_21</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T3_22</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>End_3</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:startEvent id="Start_3" name="Início"><bpmn:outgoing>F3_1</bpmn:outgoing></bpmn:startEvent>
+    <bpmn:task id="T3_1" name="Recebe a programação de fotos"><bpmn:incoming>F3_1</bpmn:incoming><bpmn:outgoing>F3_2</bpmn:outgoing></bpmn:task>
+    <bpmn:task id="T3_2" name="Realiza as fotos na escola (conforme agenda)"><bpmn:incoming>F3_2</bpmn:incoming><bpmn:outgoing>F3_3</bpmn:outgoing></bpmn:task>
+    <bpmn:task id="T3_3" name="Envia as fotos para a equipe de edição"><bpmn:incoming>F3_3</bpmn:incoming></bpmn:task>
+    <bpmn:task id="T3_4" name="Recebe as fotos" />
+    <bpmn:task id="T3_5" name="Trata e edita as imagens" />
+    <bpmn:task id="T3_6" name="Monta a planilha de vendas" />
+    <bpmn:task id="T3_7" name="Cria uma chave de acesso para cada aluno" />
+    <bpmn:task id="T3_8" name="Envia a planilha para o site" />
+    <bpmn:task id="T3_9" name="Recebe e cadastra a planilha no site (linkada)" />
+    <bpmn:task id="T3_10" name="Define o período de vendas" />
+    <bpmn:task id="T3_11" name="Disponibiliza os produtos no site para compra" />
+    <bpmn:task id="T3_12" name="Acompanha as vendas e pedidos" />
+    <bpmn:task id="T3_13" name="Ao fim do período, exporta a planilha do site" />
+    <bpmn:task id="T3_14" name="Recebe a planilha de pedidos" />
+    <bpmn:task id="T3_15" name="Faz a diagramação dos produtos de acordo com cada pedido (caneca, marca página, ímã de geladeira etc.)" />
+    <bpmn:task id="T3_16" name="Envia os arquivos e pedidos para os fornecedores" />
+    <bpmn:task id="T3_17" name="Recebe o pedido" />
+    <bpmn:task id="T3_18" name="Confecciona os produtos" />
+    <bpmn:task id="T3_19" name="Entrega os produtos na ABDesign" />
+    <bpmn:task id="T3_20" name="Recebe os produtos" />
+    <bpmndi:BPMNShape id="End_3_di" bpmnElement="End_3"><dc:Bounds x="800" y="800" width="36" height="36" /></bpmndi:BPMNShape>
+    <bpmn:task id="T3_21" name="Faz a conferência e separação por aluno" />
+    <bpmn:task id="T3_22" name="Organiza para entrega às escolas" />
+    <bpmn:endEvent id="End_3" name="Fim" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_3">
+    <bpmndi:BPMNPlane id="BPMNPlane_3" bpmnElement="Collaboration_3">
+      <bpmndi:BPMNShape id="Participant_3_di" bpmnElement="Participant_3" isHorizontal="true"><dc:Bounds x="100" y="50" width="1100" height="780" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_3_1_di" bpmnElement="Lane_3_1" isHorizontal="true"><dc:Bounds x="130" y="50" width="1070" height="120" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_3_2_di" bpmnElement="Lane_3_2" isHorizontal="true"><dc:Bounds x="130" y="170" width="1070" height="120" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_3_3_di" bpmnElement="Lane_3_3" isHorizontal="true"><dc:Bounds x="130" y="290" width="1070" height="120" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_3_4_di" bpmnElement="Lane_3_4" isHorizontal="true"><dc:Bounds x="130" y="410" width="1070" height="120" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_3_5_di" bpmnElement="Lane_3_5" isHorizontal="true"><dc:Bounds x="130" y="530" width="1070" height="120" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_3_6_di" bpmnElement="Lane_3_6" isHorizontal="true"><dc:Bounds x="130" y="650" width="1070" height="130" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Start_3_di" bpmnElement="Start_3"><dc:Bounds x="170" y="90" width="36" height="36" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T3_1_di" bpmnElement="T3_1"><dc:Bounds x="230" y="70" width="130" height="75" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T3_2_di" bpmnElement="T3_2"><dc:Bounds x="380" y="70" width="130" height="75" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T3_3_di" bpmnElement="T3_3"><dc:Bounds x="530" y="70" width="130" height="75" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T3_4_di" bpmnElement="T3_4"><dc:Bounds x="230" y="190" width="130" height="75" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T3_5_di" bpmnElement="T3_5"><dc:Bounds x="380" y="190" width="130" height="75" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T3_6_di" bpmnElement="T3_6"><dc:Bounds x="530" y="190" width="130" height="75" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T3_7_di" bpmnElement="T3_7"><dc:Bounds x="680" y="190" width="130" height="75" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T3_8_di" bpmnElement="T3_8"><dc:Bounds x="830" y="190" width="130" height="75" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T3_9_di" bpmnElement="T3_9"><dc:Bounds x="230" y="310" width="130" height="75" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T3_10_di" bpmnElement="T3_10"><dc:Bounds x="380" y="310" width="130" height="75" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T3_11_di" bpmnElement="T3_11"><dc:Bounds x="530" y="310" width="130" height="75" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T3_12_di" bpmnElement="T3_12"><dc:Bounds x="680" y="310" width="130" height="75" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T3_13_di" bpmnElement="T3_13"><dc:Bounds x="830" y="310" width="130" height="75" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T3_14_di" bpmnElement="T3_14"><dc:Bounds x="450" y="430" width="130" height="75" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T3_15_di" bpmnElement="T3_15"><dc:Bounds x="600" y="430" width="150" height="75" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T3_16_di" bpmnElement="T3_16"><dc:Bounds x="770" y="430" width="130" height="75" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T3_17_di" bpmnElement="T3_17"><dc:Bounds x="450" y="550" width="130" height="75" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T3_18_di" bpmnElement="T3_18"><dc:Bounds x="600" y="550" width="130" height="75" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T3_19_di" bpmnElement="T3_19"><dc:Bounds x="770" y="550" width="130" height="75" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T3_20_di" bpmnElement="T3_20"><dc:Bounds x="770" y="675" width="130" height="75" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T3_21_di" bpmnElement="T3_21"><dc:Bounds x="600" y="675" width="130" height="75" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T3_22_di" bpmnElement="T3_22"><dc:Bounds x="450" y="675" width="130" height="75" /></bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
